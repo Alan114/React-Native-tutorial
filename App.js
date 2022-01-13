@@ -21,6 +21,9 @@ export default function App() {
 
   const pressHandler = (id) => {
     console.log(id);
+    setPeople((prevPeople) => {
+      return prevPeople.filter((person) => person.id != id);
+    });
   };
 
   return (
